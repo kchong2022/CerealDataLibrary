@@ -73,7 +73,6 @@ function findImageURL(selectedCereal){
 
 
 //function 3: returns the names of cereals with the inputted amount of sugar
-//the user inputs a sugar amount, the program loops through to find any matching cereals and returns the name(s)
 function sugarSearch(sugar){
     var findSugar = [];
     for (var i = 0; i < sugars.length; i++){
