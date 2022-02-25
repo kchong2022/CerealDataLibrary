@@ -59,9 +59,8 @@ function getMostFiber() {
 //console.log(getMostFiber());
 
 //function 2: prints the url for the image of the cereal name inputted
-//param sugar {number} - the inputted quantity of sugar (in grams)
-//return {list} - the name(s) of the cereals with amounts of sugar that match the inputted quanity
-function findImageURL(selectedCereal){
+//param selectedCereal {string} - the name of the cereal inputted by the user
+//return {string} – the URL for the image of the cereal name inputted by the user
     selectedCereal = selectedCereal.toLowerCase();
     var getCerealURL = [];
     for (var i in name){
@@ -76,8 +75,9 @@ function findImageURL(selectedCereal){
 
 
 //function 3: returns the names of cereals with the inputted amount of sugar
-//param selectedName {string} – the name of the cereal inputted by the user
-//return {string} – the grams of protein, fat, and carbohydrates in the cereal inputted by the user
+//param sugar {number} - the inputted quantity of sugar (in grams)
+//return {list} - the name(s) of the cereals with amounts of sugar that match the inputted quanity
+function findImageURL(selectedCereal){
 function sugarSearch(sugar){
     var findSugar = [];
     for (var i = 0; i < sugars.length; i++){
@@ -94,6 +94,8 @@ function sugarSearch(sugar){
 
 
 //function 4: returns the macronutrients (protein, fat, and carbohydrates) of the desired cereal
+//param selectedName {string} – the name of the cereal inputted by the user
+//return {string} – the grams of protein, fat, and carbohydrates in the cereal inputted by the user
 function getMacros(selectedName) {
     selectedName = selectedName.toLowerCase();
     var macros = [];
