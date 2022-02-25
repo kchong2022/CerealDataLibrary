@@ -39,6 +39,7 @@ const serving = getColumn(url,9);
 const image= getColumn(url,10);
 
 //function 1: returns which cereal has the most fiber
+//return {string} – returns the name of the cereal with the most fiber in grams out of the database
 function getMostFiber() {
     var maxFiber = 0;
     var maxFiberName = "";
@@ -58,6 +59,8 @@ function getMostFiber() {
 //console.log(getMostFiber());
 
 //function 2: prints the url for the image of the cereal name inputted
+//param sugar {number} - the inputted quantity of sugar (in grams)
+//return {list} - the name(s) of the cereals with amounts of sugar that match the inputted quanity
 function findImageURL(selectedCereal){
     selectedCereal = selectedCereal.toLowerCase();
     var getCerealURL = [];
@@ -73,6 +76,8 @@ function findImageURL(selectedCereal){
 
 
 //function 3: returns the names of cereals with the inputted amount of sugar
+//param selectedName {string} – the name of the cereal inputted by the user
+//return {string} – the grams of protein, fat, and carbohydrates in the cereal inputted by the user
 function sugarSearch(sugar){
     var findSugar = [];
     for (var i = 0; i < sugars.length; i++){
@@ -108,6 +113,7 @@ function getMacros(selectedName) {
 
 
 //function 5: returns the average serving size of a portion of cereal; gives an estimate of roughly how much cereal you should be eating/the portions that most other people are eating
+//return {string} – returns the average portion size of the cereals in the database
 function getAvgPortion(){
     var sum = 0;
     for (var i = 0; i < serving.length; i++){
